@@ -161,32 +161,38 @@ public class main {
 		        				//SampleStart
 		        				Node sampleStartNode = regionPropertiesElement.getElementsByTagName("SampleStart").item(0);
 		        				String sampleStartString = sampleStartNode.getTextContent();
-
-		        					outSFZ.write("offset=" + sampleStartString + "\n");
+		        				
+		        				if (sampleStartString.equals("0")) {}
+		        				else outSFZ.write("offset=" + sampleStartString + "\n");
 
 		        				//SampleVolume
 		        				Node sampleVolumeNode = regionPropertiesElement.getElementsByTagName("SampleVolume").item(0);
 		        				String sampleVolumeString = sampleVolumeNode.getTextContent();
-
-		        					outSFZ.write("volume=" + sampleVolumeString + "\n");
+		        				
+		        				if (sampleVolumeString.equals("0")) {}
+		        				else outSFZ.write("volume=" + sampleVolumeString + "\n");
 
 		        				//SamplePan
 		        				Node samplePanNode = regionPropertiesElement.getElementsByTagName("SamplePan").item(0);
 		        				String samplePanString = samplePanNode.getTextContent();
-
-		        					outSFZ.write("pan=" + samplePanString + "\n");
+		        				
+		        				if (samplePanString.equals("0")) {}
+		        				else outSFZ.write("pan=" + samplePanString + "\n");
 
 		        				//SampleTune
 		        				Node sampleTuneNode = regionPropertiesElement.getElementsByTagName("SampleTune").item(0);
 		        				String sampleTuneString = sampleTuneNode.getTextContent();
-
-		        					outSFZ.write("transpose=" + sampleTuneString + "\n");
+		        				
+		        				if (sampleTuneString.equals("0")) {}
+		        				else outSFZ.write("transpose=" + sampleTuneString + "\n");
 
 		        				//SampleFine
 		        				Node sampleFineNode = regionPropertiesElement.getElementsByTagName("SampleFine").item(0);
 		        				String sampleFineString = sampleFineNode.getTextContent();
-
-		        					outSFZ.write("tune=" + sampleFineString + "\n\n");
+		        				
+		        				if (sampleFineString.equals("0")) {}
+		        				else outSFZ.write("tune=" + sampleFineString + "\n");
+		        				outSFZ.write("\n");
 		        			}
 		        		}
 	        		}
